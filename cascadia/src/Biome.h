@@ -1,5 +1,6 @@
 #pragma once
 
+// clang-format off
 enum class Biome {
     Forest,
     Mountain,
@@ -8,3 +9,4 @@ enum class Biome {
     River,
     COUNT
 };
+// clang-format on

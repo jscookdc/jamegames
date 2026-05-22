@@ -1,5 +1,6 @@
 #pragma once
 
+// clang-format off
 enum class WildlifeType
 {
     NoToken,
@@ -10,3 +11,4 @@ enum class WildlifeType
     Salmon,
     COUNT
 };
+// clang-format on

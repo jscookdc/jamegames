@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y \
     libgoogle-glog-dev \
     gdb \
     git \
+    clang-format \
     && rm -rf /var/lib/apt/lists/*

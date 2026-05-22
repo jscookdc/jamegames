@@ -1,5 +1,24 @@
 {
   "name": "jamegames",
   "build": { "dockerfile": "Dockerfile" },
-  "workspaceFolder": "/workspaces/jamegames"
+  "workspaceFolder": "/workspaces/jamegames",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.clang_format_style": "file",
+        "C_Cpp.clang_format_fallbackStyle": "LLVM",
+        "[cpp]": {
+          "editor.defaultFormatter": "ms-vscode.cpptools"
+        },
+        "[c]": {
+          "editor.defaultFormatter": "ms-vscode.cpptools"
+        }
+      }
+    }
+  }
 }

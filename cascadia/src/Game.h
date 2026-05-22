@@ -1,25 +1,24 @@
 #pragma once
 
+#include "BiomeUtilities.h"
+#include "Log.h"
 #include "Player.h"
 #include "Tile.h"
-#include "Log.h"
-#include <vector>
-#include <map> 
-#include "BiomeUtilities.h" 
 #include "WildlifeTypeUtilities.h"
+#include <map>
+#include <vector>
 
-class Game
-{
-    public:
-        Game(std::vector<Player> players);
+class Game {
+public:
+  Game(std::vector<Player> players);
 
-        void initialize();
-        void printScoreboard();
+  void initialize();
+  void printScoreboard();
 
-    private:
-        void printStartupLog();
+private:
+  void printStartupLog();
 
-        std::vector<Player> m_players;
+  std::vector<Player> m_players;
 
-        uint8_t m_current_turn = 0;
+  uint8_t m_current_turn = 0;
 };
