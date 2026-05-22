@@ -1,0 +1,5 @@
+{
+  "name": "jamegames",
+  "build": { "dockerfile": "Dockerfile" },
+  "workspaceFolder": "/workspaces/jamegames"
+}
