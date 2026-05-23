@@ -8,11 +8,11 @@
 
 struct HexCoordinate {
   int q, r;
-  bool operator==(const HexCoordinate &) const = default;
+  bool operator==(const HexCoordinate&) const = default;
 };
 
 struct HexCoordinateHash {
-  std::size_t operator()(const HexCoordinate &c) const {
+  std::size_t operator()(const HexCoordinate& c) const {
     return std::hash<int>()(c.q) ^ (std::hash<int>()(c.r) << 16);
   }
 };

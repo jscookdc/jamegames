@@ -8,7 +8,7 @@ enum class GameState {
 };
 // clang-format on
 
-inline std::ostream &operator<<(std::ostream &os, GameState state) {
+inline std::ostream& operator<<(std::ostream& os, GameState state) {
   switch (state) {
   case GameState::Initializing:
     return os << "Initializing";

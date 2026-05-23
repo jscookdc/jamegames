@@ -9,8 +9,7 @@ class WildlifeTypeUtilities {
 public:
   static std::string toString(WildlifeType wildlife_type);
   static WildlifeType getRandomWildlifeType();
-  static std::vector<WildlifeType>
-  getRandomWildlifeTypeVector(unsigned max_size);
+  static std::vector<WildlifeType> getRandomWildlifeTypeVector(unsigned max_size);
 
 private:
   WildlifeTypeUtilities() = delete;

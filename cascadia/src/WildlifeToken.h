@@ -8,7 +8,7 @@ public:
 
   WildlifeType getWildlifeType() const;
 
-  bool operator==(const WildlifeToken &other_token);
+  bool operator==(const WildlifeToken& other_token);
 
 private:
   WildlifeType m_wildlife_type;

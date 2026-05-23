@@ -19,8 +19,7 @@ std::string BiomeUtilities::toString(Biome biome) {
 
 Biome BiomeUtilities::getRandomBiome() {
   static std::mt19937 rng(std::random_device{}());
-  static std::uniform_int_distribution<int> dist(
-      0, static_cast<int>(Biome::COUNT) - 1);
+  static std::uniform_int_distribution<int> dist(0, static_cast<int>(Biome::COUNT) - 1);
 
   return static_cast<Biome>(dist(rng));
 }

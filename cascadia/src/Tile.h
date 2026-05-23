@@ -10,8 +10,7 @@ class Player;
 
 class Tile {
 public:
-  Tile(Biome biome_1, Biome biome_2,
-       std::vector<WildlifeType> wildlife_token_options);
+  Tile(Biome biome_1, Biome biome_2, std::vector<WildlifeType> wildlife_token_options);
   Tile(Biome biome_1, Biome biome_2, WildlifeType single_wildlife_token_option);
 
   /**
@@ -29,7 +28,7 @@ public:
    * @param token a specific wildlife token
    * @param player a specific player playing the token
    */
-  void placeWildlifeToken(WildlifeToken token, Player &player);
+  void placeWildlifeToken(WildlifeToken token, Player& player);
 
 private:
   Biome m_biome_1;

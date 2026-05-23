@@ -21,14 +21,12 @@ std::string WildlifeTypeUtilities::toString(WildlifeType wildlife_type) {
 
 WildlifeType WildlifeTypeUtilities::getRandomWildlifeType() {
   static std::mt19937 rng(std::random_device{}());
-  static std::uniform_int_distribution<int> dist(
-      0, static_cast<int>(WildlifeType::COUNT) - 1);
+  static std::uniform_int_distribution<int> dist(0, static_cast<int>(WildlifeType::COUNT) - 1);
 
   return static_cast<WildlifeType>(dist(rng));
 }
 
-std::vector<WildlifeType>
-WildlifeTypeUtilities::getRandomWildlifeTypeVector(unsigned max_size) {
+std::vector<WildlifeType> WildlifeTypeUtilities::getRandomWildlifeTypeVector(unsigned max_size) {
   if (max_size == 0) {
     throw std::invalid_argument("max_size must be a positive integer");
   }
@@ -38,8 +36,7 @@ WildlifeTypeUtilities::getRandomWildlifeTypeVector(unsigned max_size) {
   std::uniform_int_distribution<unsigned> size_dist(1, max_size);
   unsigned size = size_dist(rng);
 
-  std::uniform_int_distribution<int> wildlife_dist(
-      0, static_cast<int>(WildlifeType::COUNT) - 1);
+  std::uniform_int_distribution<int> wildlife_dist(0, static_cast<int>(WildlifeType::COUNT) - 1);
 
   std::vector<WildlifeType> result;
   result.reserve(size);

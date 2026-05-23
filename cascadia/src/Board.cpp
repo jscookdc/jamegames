@@ -9,21 +9,20 @@ static constexpr HexCoordinate k_hex_neighbors[6] = {
     {0, 1},  // SE  (5 o'clock)
 };
 
-Board::Board() { initializeBoard(); }
+Board::Board() {
+  initializeBoard();
+}
 
 void Board::initializeBoard() {
   LOG_DEBUG << "New board instantiated.";
   m_tiles.emplace(HexCoordinate{0, 0},
-                  Tile(BiomeUtilities::getRandomBiome(),
-                       BiomeUtilities::getRandomBiome(),
+                  Tile(BiomeUtilities::getRandomBiome(), BiomeUtilities::getRandomBiome(),
                        WildlifeTypeUtilities::getRandomWildlifeTypeVector(3)));
   m_tiles.emplace(HexCoordinate{0, 1},
-                  Tile(BiomeUtilities::getRandomBiome(),
-                       BiomeUtilities::getRandomBiome(),
+                  Tile(BiomeUtilities::getRandomBiome(), BiomeUtilities::getRandomBiome(),
                        WildlifeTypeUtilities::getRandomWildlifeTypeVector(3)));
   m_tiles.emplace(HexCoordinate{-1, 1},
-                  Tile(BiomeUtilities::getRandomBiome(),
-                       BiomeUtilities::getRandomBiome(),
+                  Tile(BiomeUtilities::getRandomBiome(), BiomeUtilities::getRandomBiome(),
                        WildlifeTypeUtilities::getRandomWildlifeTypeVector(3)));
 }
 
@@ -31,7 +30,7 @@ bool Board::isValidPlacement(HexCoordinate coordinate) const {
   if (m_tiles.contains(coordinate)) {
     return false;
   }
-  for (const auto &offset : k_hex_neighbors) {
+  for (const auto& offset : k_hex_neighbors) {
     if (m_tiles.count({coordinate.q + offset.q, coordinate.r + offset.r})) {
       return true;
     }
@@ -46,4 +45,6 @@ void Board::placeTile(Tile tile, HexCoordinate coordinate) {
   m_tiles.emplace(coordinate, std::move(tile));
 }
 
-std::size_t Board::getBoardSize() const { return m_tiles.size(); }
+std::size_t Board::getBoardSize() const {
+  return m_tiles.size();
+}
