@@ -1,12 +1,16 @@
 {
   "name": "jamegames",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "workspaceFolder": "/workspaces/jamegames",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools",
-        "ms-vscode.cmake-tools"
+        "ms-vscode.cmake-tools",
+        "eamodio.gitlens",
+        "cshlosser.doxdocgen"
       ],
       "settings": {
         "editor.formatOnSave": true,
